@@ -45,8 +45,9 @@ public class LoginActivity extends StoryActivityBase{
 	 * Get the file used for storing login credentials
 	 */
 	public static File getLoginFile (Context context) {
+	    // Change folder file from sd-card to private
 		return StorageUtilities.getOutputMediaFile(context, 	// Line 48
-				StorageUtilities.MEDIA_TYPE_TEXT, 
+				StorageUtilities.SECURITY_PRIVATE, 
 				MAX_SECURITY, 
 				"login.txt");
 	}
